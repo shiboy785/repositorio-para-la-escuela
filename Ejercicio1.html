@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let componente = parseInt(prompt("Ingresa el numero del componente que deseas inventariar:\n1. Procesador\n2. Tarjeta Grafica\n3. Memoria RAM\n4. Disco Duro"));
+        let stock = parseInt(prompt("Ingresa la cantidad disponible en stock:"));
+
+        if (isNaN(componente) || componente < 1 || componente > 4) {
+            alert("El numero de componente no es valido.");
+        } else if (isNaN(stock) || stock < 0) {
+            alert("Debe ingresar una cantidad de stock valida.");
+        } else {
+
+        }
+
+        let nombreComponente;
+        switch (componente) {
+            case 1:
+                nombreComponente = "Procesador";
+                break;
+            case 2:
+                nombreComponente = "Tarjeta Grafica";
+                break;
+            case 3:
+                nombreComponente = "Memoria RAM";
+                break;
+            case 4:
+                nombreComponente = "Disco Duro";
+                break;
+            default:
+                nombreComponente = "Componente no válido";
+                break;
+        }
+        let estadoStock;
+        if (stock < 3) {
+            estadoStock = "pedido urgente";
+        } else if (stock >= 3 && stock <= 10) {
+            estadoStock = "stock bajo, considerar comra";
+        } else {
+            estadoStock = "stock suficiente";
+
+
+        }
+        alert ("Componente: " + nombreComponente + "\nCantidad en stock: " + stock + "\nEstado: " + estadoStock);
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

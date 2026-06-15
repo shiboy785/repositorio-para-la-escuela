@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Ingresa un numero del 1 al 5 para su componente 1 (placa madre), 2 (procesador), 3 (memoria RAM), 4 (disco rigido / SSD), 5 (fuente de poder):"));
+        switch (numero) {
+            case 1:
+                alert("Registrar número de serie y estado general");
+                break;
+            case 2:
+                alert("Controlar temperatura durante el funcionamiento");
+                break;
+            case 3:
+                alert("Ejecutar una prueba de rendimiento");
+                break;
+            case 4:
+                alert("Verificar espacio disponible y estado del almacenamiento");
+                break;
+            case 5:
+                alert("Comprobar conexiones eléctricas.");
+                break;
+            default:
+                alert("Numero no valido, por favor ingresa un numero del 1 al 5.");
+        }
+        console.log("Componente seleccionado: " + numero);
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa el nombre de tu equipo:");
+        let nivel = parseInt(prompt("Ingresa el nivel de prioridad 1 (baja), 2 (media), 3 (alta):"));
+        let dias = parseInt (prompt("ingresa los dias transcurridos desde que se reporto el problema "));
+
+        let prioridad;
+        if (nivel === 1) {
+            prioridad = "La tarea puede programarse para los próximos días";
+        } else if (nivel === 2) {
+            prioridad = "La tarea debe realizarse esta semana.";
+        } else if (nivel === 3) {
+            prioridad = "La tarea requiere atención inmediata.";
+        } else {
+            prioridad = "Nivel no válido";
+        }
+        if (dias > 7) {
+            prioridad += " El problema ha estado sin resolver por más de una semana.";
+        }
+        let DiasRestantesTrascurridos;
+        if (dias < 3) {
+            DiasRestantesTransucurridos = "seguimiento normal";
+        } else if (dias >= 3 && dias <= 7) {
+            DiasRestantesTransucurridos = "realizar control del estado de la tarea";
+        } else {
+            DiasRestantesTransucurridos = "generar alerta por demora";
+        }
+        let resumen = "=== RESUMEN DEL EQUIPO ===\n" +
+                  "Equipo: " + nombre + "\n" +
+                  "Nivel de prioridad: " + nivel + "\n" +
+                  "Mensaje: " + prioridad + "\n" +
+                  "Días transcurridos: " + dias + "\n" +
+                  "Estado de seguimiento: " + estadoSeguimiento;   
+        alert(resumen);
+        console.log(resumen);
+
+    </script>
+    
+
+</body>
+</html>
